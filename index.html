@@ -155,32 +155,34 @@
 
             
             (function addSectionStickers(){
-                sections.forEach((sec, idx) => {
-                
-                    const k1 = document.createElement('div'); k1.className = 'sticker kitty';
-                    const k2 = document.createElement('div'); k2.className = 'sticker kitty';
-                    const k3 = document.createElement('div'); k3.className = 'sticker kitty';
+    sections.forEach((sec, idx) => {
+        
+        const k1 = document.createElement('div'); 
+        k1.className = 'sticker kitty';
+        k1.style.backgroundImage = "url('download.png')";
+        
+        const k2 = document.createElement('div'); 
+        k2.className = 'sticker kitty';
+        k2.style.backgroundImage = "url('download (1).png')";
+        
+        const k3 = document.createElement('div'); 
+        k3.className = 'sticker kitty';
+        k3.style.backgroundImage = "url('download.png')";
 
-                    
-                    k1.style.top = (8 + (idx * 7) % 40) + '%';
-                    k1.style.left = (10 + (idx * 18) % 70) + 'px';
+        k1.style.top = (8 + (idx * 7) % 40) + '%';
+        k1.style.left = (10 + (idx * 18) % 70) + 'px';
 
-                    
-                    k2.style.top = (6 + (idx * 9) % 50) + '%';
-                    k2.style.right = (20 + (idx * 22) % 90) + 'px';
+        k2.style.top = (6 + (idx * 9) % 50) + '%';
+        k2.style.right = (20 + (idx * 22) % 90) + 'px';
 
-                    
-                    k3.style.top = (48 + (idx * 5) % 38) + '%';
-                    k3.style.left = (30 + (idx * 14) % 60) + 'px';
-
-                    
-
-                    sec.appendChild(k1);
-                    sec.appendChild(k2);
-                    sec.appendChild(k3);
-                    sec.appendChild(ku);
-                });
-            })();
+        k3.style.top = (48 + (idx * 5) % 38) + '%';
+        k3.style.left = (30 + (idx * 14) % 60) + 'px';
+        
+        sec.appendChild(k1);
+        sec.appendChild(k2);
+        sec.appendChild(k3);
+    });
+})();
 
            
             const initial = location.hash ? location.hash.slice(1) : 'home';
